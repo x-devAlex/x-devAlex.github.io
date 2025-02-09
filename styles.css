@@ -100,8 +100,8 @@
 ========================== */
 .login-text {
   font-size: 2rem; /* Збільшений розмір шрифту */
-  font-weight: 600; /* Напівжирний */
-  font-family: "Inter-Medium", sans-serif;
+  font-weight: 400; /* Напівжирний */
+  font-family: "Inter-Regular", sans-serif;
   text-align: center; /* Центруємо текст */
   color: #303030; /* Темний колір тексту */
   position:absolute;
