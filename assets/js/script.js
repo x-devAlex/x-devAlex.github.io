@@ -1,11 +1,28 @@
-// Видимість паролю
-const togglePassword = document.querySelector('#togglePassword');
-const password = document.querySelector('#password');
-
-togglePassword.addEventListener('click', function() {
-    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-    password.setAttribute('type', type);
+// Перемикання видимості для пароля
+document.getElementById('togglePassword').addEventListener('click', function () {
+    const password = document.getElementById('password');
+    const togglePasswordBtn = document.getElementById('togglePassword');
     
-    // Перемикаємо клас active для зміни кольору
-    this.classList.toggle('active');
+    if (password.type === "password") {
+        password.type = "text";
+        togglePasswordBtn.classList.add('active');
+    } else {
+        password.type = "password";
+        togglePasswordBtn.classList.remove('active');
+    }
 });
+
+// Перемикання видимості для поля "Повторіть пароль"
+document.getElementById('togglePasswordConfirm').addEventListener('click', function () {
+    const confirmPassword = document.getElementById('confirmPassword');
+    const togglePasswordConfirmBtn = document.getElementById('togglePasswordConfirm');
+    
+    if (confirmPassword.type === "password") {
+        confirmPassword.type = "text";
+        togglePasswordConfirmBtn.classList.add('active');
+    } else {
+        confirmPassword.type = "password";
+        togglePasswordConfirmBtn.classList.remove('active');
+    }
+});
+
